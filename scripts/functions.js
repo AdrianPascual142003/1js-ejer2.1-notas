@@ -32,7 +32,7 @@ function avgGrade(grades) {
 function finalGrades(grades, increment) {
 	grades = clearGrades(grades);
 	increment = increment / 100;
-	return grades.map(grade => Math.round(grade + grade * increment));
+	return grades.map(grade => (grade + grade * increment).toFixed());
 }
 
 module.exports = {
